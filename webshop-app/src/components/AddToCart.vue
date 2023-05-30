@@ -1,6 +1,9 @@
 <script setup>
 import { useCartStore } from '../../store/cart'
 import { ref, watch } from 'vue'
+import { useToast } from 'vue-toastification'
+
+const toast = useToast()
 
 const proprs = defineProps({
   guitar: {
@@ -10,8 +13,9 @@ const proprs = defineProps({
 })
 
 const count = ref(0)
-const { addItemToCart, getItemById } = useCartStore()
-const buttonText = 'Add to cart'
+const { addItemToCart, getItemById, changeItemCount, deleteFromCart } =
+  useCartStore()
+const buttonText = ref('Add to cart')
 
 watch(count, () => {
   const minCount = 0
@@ -33,9 +37,18 @@ function handleIncreaseCountClick() {
 }
 
 function handleCartClick(guitar) {
-  if (getItemById(guitar.id) && count.value > 0) {
+  const item = getItemById(guitar.id)
+  if (!item && count.value > 0) {
     addItemToCart(guitar, count.value)
     buttonText.value = 'Update cart'
+    toast.success('Item has been added to the cart!')
+  } else if (item?.stock !== count.value && count.value > 0) {
+    changeItemCount(guitar.id, count)
+    toast.success('Item count has been changed!')
+  } else if (item && count.value === 0) {
+    deleteFromCart(guitar.id)
+    buttonText.value = 'Add to cart'
+    toast.success('Item has been removed from cart!')
   }
 }
 </script>

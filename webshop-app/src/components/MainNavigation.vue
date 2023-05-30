@@ -1,7 +1,11 @@
-<script setup></script>
+<script setup>
+import { useCartStore } from '../../store/cart'
+
+const { totalCount } = useCartStore()
+</script>
 
 <template>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
     <div class="container">
       <a class="navbar-brand" href="#">GuitarSHOP</a>
       <button
@@ -27,7 +31,10 @@
           </li>
           <li class="nav-item">
             <routerLink class="nav-link" :to="{ name: 'cart' }">
-              Cart
+              <span v-show="totalCount > 0" class="position-relative">
+                Cart
+                <span class="badge text-bg-danger">{{ totalCount }}</span>
+              </span>
             </routerLink>
           </li>
         </ul>

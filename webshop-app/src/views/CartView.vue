@@ -1,6 +1,8 @@
-<script setup></script>
+<script setup>
+import ShoppingCart from '../components/ShoppingCart.vue'
+</script>
 <template>
-  <div>Cartview</div>
+  <ShoppingCart />
 </template>
 
-<style  scoped></style>
+<style scoped></style>
