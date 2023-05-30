@@ -1,0 +1,44 @@
+{
+  "guitars": [
+    {
+      "id": 1,
+      "title": "Ibanez S6570SK-STB Prestige",
+      "description": "There are three principles behind the Ibanez Prestige line: Precision, Performance, and Playability. Prestige combines high-tech manufacturing techniques with old-world Japanese craftsmanship, in order to achieve true innovation in design and construction. The series incorporates ideas and suggestions from musicians from around the world as the cornerstones of the Prestige production process.",
+      "price": 2269,
+      "rating": 5,
+      "stock": 0
+    },
+    {
+      "id": 2,
+      "title": "Fender AM Ultra Luxe Strat MN PRB",
+      "description": "For players who demand the ultimate in performance and tone, American Ultra is our most advanced series of guitars and basses. Featuring stainless-steel frets and eye-catching custom colors with matching painted headcaps, the American Ultra Luxe Stratocaster is Ultra – elevated.",
+      "price": 2490,
+      "rating": 5,
+      "stock": 2
+    },
+    {
+      "id": 3,
+      "title": "FGN Expert Odyssey SBB",
+      "description": "The Odyssey (OS) series is the very first original FGN guitar. It was designed with precision & detail stemming from a long history of guitar manufacturing experience. These guitars are relatively simple with a traditional taste yet sport very useful modern & practical features for today's musicians.",
+      "price": 1899,
+      "rating": 5,
+      "stock": 11
+    },
+    {
+      "id": 4,
+      "title": "Gibson SG Standard Reissue Cherry VOS",
+      "description": "Gibson Custom's Vintage Original Sheen finish option comes standard on Custom Shop Historic Reissue models. The VOS finish package includes lightly aged parts that imparts an authentic vintage patina. The nitrocellulose finished it buffed to a light matte appearance, giving a look and feel of a guitar that has been lovingly played and cared for over the years.",
+      "price": 3777,
+      "rating": 5,
+      "stock": 1
+    },
+    {
+      "id": 5,
+      "title": "Jackson SL2A MAH Pro Soloist UWH",
+      "description": "Born in Southern California in 1980, Jackson was the first brand to embrace the needs of hard rock and metal virtuosos by providing instruments with feature sets that catered to high-velocity playing.",
+      "price": 1099,
+      "rating": 4,
+      "stock": 25
+    }
+  ]
+}
